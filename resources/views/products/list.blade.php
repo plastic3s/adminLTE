@@ -84,5 +84,5 @@
             <strong>{{ $products->total() }}</strong>
             <span>results</span>
         </div>
-    </d
+    </div>
 </div>

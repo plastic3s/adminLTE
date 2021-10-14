@@ -48,14 +48,7 @@
         )
     });
 
-    $(document).ready(function () {
-        $('#select2-dropdown').select2();
-        let on = $('#select2-dropdown').on('change', function (e)
-        {
-            let data = $('#select2-dropdown').select2("val");
-        @this.set('ottPlatform', data);
-        });
-    });
+
 
 </script>
 @endpush

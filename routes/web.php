@@ -23,6 +23,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/select2', function () {
+    return view('select2.index');
+})->name('select2.index')->middleware('auth');;
+
+
 Route::get('/products', function () {
     return view('products.index');
 })->name('products.index')->middleware('auth');;
