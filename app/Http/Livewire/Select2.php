@@ -24,4 +24,9 @@ class Select2 extends Component
         return view('select2.select2');
     }
 
+    public function test()
+    {
+        dd($this->s2);
+    }
+
 }
