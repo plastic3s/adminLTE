@@ -2,6 +2,8 @@
 
 @section('title', 'AdminLTE')
 
+@section('plugins.DataTables', true)
+
 @section('content_header')
     <h1 class="m-0 text-dark">Products</h1>
 @stop
@@ -52,3 +54,4 @@
 
 </script>
 @endpush
+

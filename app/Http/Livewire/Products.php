@@ -14,6 +14,7 @@ class Products extends Component
     public $name, $desc, $product_id;
     public $updateMode = false;
 
+    public $dtSortClass = 'sorting';
     public $searchTerm;
     public $perPage=10;
     public $sortField = false;
@@ -31,6 +32,18 @@ class Products extends Component
         }
 
         $this->sortField=$field;
+    }
+
+    public function sortIcon($field){
+        if ($this->sortField !== $field) {
+            $this->dtSortClass = 'sorting';
+            }
+        elseif($this->sortAsc) {
+            $this->dtSortClass = 'sorting_asc';
+            }
+        else {
+            $this->dtSortClass = 'sorting_desc';
+        }
     }
 
     public function render()

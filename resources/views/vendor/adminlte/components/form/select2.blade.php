@@ -3,7 +3,7 @@
 @section('input_group_item')
 
     {{-- Select --}}
-    <select id="{{ $id }}" name="{{ $name }}"
+    <select id="{{ $id }}" name="{{ $name }}" data-dropdown-css-class="{{ $dataDropdownCssClass }}"
         {{ $attributes->merge(['class' => $makeItemClass()]) }}>
         {{ $slot }}
     </select>

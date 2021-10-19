@@ -37,21 +37,22 @@
             {{ session('message') }}
         </div>
     @endif
-    <table class="table table-striped table-hover">
+    <table class="table table-striped table-hover dataTable">
         <thead>
         <tr>
             <th></th>
-            <th class="sorting">
+            <th class="@include('products.sort-icon2', ['field'=>'id'])">
                 <a wire:click.prevent="sortBy('id')" role="button" href="#">No
-                    @include('products.sort-icon', ['field'=>'id'])
                 </a>
             </th>
-            <th><a wire:click.prevent="sortBy('name')" role="button" href="#">Product Name
-                    @include('products.sort-icon', ['field'=>'name'])
-                </a></th>
-            <th><a wire:click.prevent="sortBy('desc')" role="button" href="#">Desc
-                    @include('products.sort-icon', ['field'=>'desc'])
-                </a></th>
+            <th class="@include('products.sort-icon2', ['field'=>'name'])">
+                <a wire:click.prevent="sortBy('name')" role="button" href="#">Product Name
+                </a>
+            </th>
+            <th class="@include('products.sort-icon2', ['field'=>'desc'])">
+                <a wire:click.prevent="sortBy('desc')" role="button" href="#">Desc
+                </a>
+            </th>
             <th><a href="#">Action</a></th>
         </tr>
         </thead>
@@ -86,3 +87,4 @@
         </div>
     </div>
 </div>
+
